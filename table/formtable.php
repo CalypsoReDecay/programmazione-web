@@ -2,7 +2,7 @@
 
 <body>
 
-<form method="get" action="/tablecopy.php?">
+<form method="get" action="/github/programmazione-web/table/tablecopy.php?">
 <input type="text" name="colore" placeholder="Colore"><br><br>
 <input type="text" name="num_riga" placeholder="Numero Righe"><br><br>
 <input type="text" name="num_colonne" placeholder="Numero Colonne"><br><br>

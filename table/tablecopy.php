@@ -6,12 +6,12 @@ $numRighe = $_GET['num_riga'];
 ?>
 
 <!-- $_GET['colore'] -->
-<a href="/tablecopy.php?colore=black&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Bianco e Nero</a><br>
-<a href="/tablecopy.php?colore=multipli&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Multipli</a><br>
-<a href="/tablecopy.php?colore=diagonale&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Diagonale</a><br>
+<a href="/github/programmazione-web/table/tablecopy.php?colore=black&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Bianco e Nero</a><br>
+<a href="/github/programmazione-web/table/tablecopy.php?colore=multipli&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Multipli</a><br>
+<a href="/github/programmazione-web/table/tablecopy.php?colore=diagonale&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Diagonale</a><br>
 <br>
 
-<!-- http://localhost/tablecopy.php?colore=diagonale&num_riga=3&num_colonne=7 -->
+<!-- http://localhost/github/programmazione-web/table/tablecopy.php?colore=diagonale&num_riga=3&num_colonne=7 -->
 
 <br><br>
 
@@ -105,7 +105,7 @@ if(getColoreCella('multipli', 2,5)== 'blue'){}
 </table>
 
 <br>
-<a href="/formtable.php"> <-- Indietro </a>
+<a href="/github/programmazione-web/table/formtable.php"> <-- Indietro </a>
 
 
 </html>
