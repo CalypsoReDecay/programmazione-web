@@ -1,20 +1,17 @@
 <html>
-<body>
-
 <?php
+$pagina = $_GET['colore'];
 $numColonne = $_GET['num_colonne'];
 $numRighe = $_GET['num_riga'];
-$pagina = $_GET['colore'];
 ?>
 
-
 <!-- $_GET['colore'] -->
-<a href="/veronica_tedesco/programmazione-web/table/tablecopy.php?colore=black&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Bianco e Nero</a><br>
-<a href="/veronica_tedesco/programmazione-web/table/tablecopy.php?colore=multipli&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Multipli</a><br>
-<a href="/veronica_tedesco/programmazione-web/table/tablecopy.php?colore=diagonale&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Diagonale</a><br>
+<a href="/github/programmazione-web/table/tablecopy.php?colore=black&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Bianco e Nero</a><br>
+<a href="/github/programmazione-web/table/tablecopy.php?colore=multipli&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Multipli</a><br>
+<a href="/github/programmazione-web/table/tablecopy.php?colore=diagonale&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Diagonale</a><br>
 <br>
 
-<!-- http://localhost/tablecopy.php?colore=diagonale&num_riga=3&num_colonne=7 -->
+<!-- http://localhost/github/programmazione-web/table/tablecopy.php?colore=diagonale&num_riga=3&num_colonne=7 -->
 
 <br><br>
 
@@ -26,7 +23,7 @@ $pagina = $_GET['colore'];
     <?php
 for ($colonne = 1; $colonne <= $numColonne; $colonne++){
     ?>
-    <th style="color: white; background-color: #960082; padding: 5px">Colonna <?=$colonne?></th>
+    <th style="color: #3F292B; background-color: #988AAA; padding: 5px">Colonna <?=$colonne?></th>
 <?php 
 } ?>
 
@@ -44,11 +41,11 @@ for ($righe = 1; $righe <= $numRighe; $righe++){
 <?php
 for ($colonne=1; $colonne <= $numColonne; $colonne++){ ?>
     <?php if($isPrimaColonna){ ?>
-        <td style="color: white; background-color: #960082; padding: 5px; font-weight: bold">Colonna <?=$contatore?></td>
+        <td style="color: #3F292B; background-color: #988AAA; padding: 5px; font-weight: bold">Colonna <?=$contatore?></td>
         <?php  $isPrimaColonna = False; ?>
     <?php }?>
 
-    <td style="color: #170E63; background-color: <?=getColoreCella($_GET['colore'], $righe, $colonne)?>">
+    <td style="color: #3F292B; background-color: <?=getColoreCella($_GET['colore'], $righe, $colonne)?>">
     <?=moltiplicazione($righe, $colonne);?>
     </td>
 <?php 
@@ -80,22 +77,27 @@ if ($pagina == 'multipli'){
 function getColoreCellaMultipli($moltiplicatore1, $moltiplicatore2){
     $risultato = $moltiplicatore1 * $moltiplicatore2;
     if($risultato % 5 == 0){
-        return 'blue';
+        return '#139099';
     } elseif($risultato % 3 == 0){
-        return 'green';
+        return '#8FAD16';
     } elseif($risultato % 2 == 0){
-        return 'red';
+        return '#C60337';
     } else {
-        return 'black';
+        return '#684347';
      }
     }
 
     function getColoreCellaDiagonale($moltiplicatore1, $moltiplicatore2){
-        return  ($moltiplicatore1 == $moltiplicatore2) ? '#7E53DB': '#FF384B';
+        return  ($moltiplicatore1 == $moltiplicatore2) ? '#9B6A6C': '#C0D1E5';
         
     }
 
-
+/*
+if(getColoreCella('bianconero', 2,4)== 'black'){}
+if(getColoreCella('multipli', 2,4)== 'red'){}
+if(getColoreCella('multipli', 2,3)== 'green'){}
+if(getColoreCella('multipli', 2,5)== 'blue'){}
+*/
 
 ?>
 
@@ -103,9 +105,8 @@ function getColoreCellaMultipli($moltiplicatore1, $moltiplicatore2){
 </table>
 
 <br>
-<a href="/veronica_tedesco/programmazione-web/table/formtable.php"> Indietro</a>
+<a href="/github/programmazione-web/table/formtable.php"> <-- Indietro </a>
 
-</body>
+
 </html>
-
 

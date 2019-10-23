@@ -8,18 +8,12 @@ $pagina = $_GET['colore'];
 ?>
 
 
-<!-- $_GET['colore'] -->
-<a href="/veronica_tedesco/programmazione-web/table/tablecopy.php?colore=black&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Bianco e Nero</a><br>
-<a href="/veronica_tedesco/programmazione-web/table/tablecopy.php?colore=multipli&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Multipli</a><br>
-<a href="/veronica_tedesco/programmazione-web/table/tablecopy.php?colore=diagonale&num_riga=<?=$numRighe?>&num_colonne=<?=$numColonne?>">Diagonale</a><br>
-<br>
-
 <!-- http://localhost/tablecopy.php?colore=diagonale&num_riga=3&num_colonne=7 -->
 
 <br><br>
 
-
-   <table border=1> 
+<div class="table-responsive"> 
+   <table class="table"> 
 <thead>
     <tr>
     <th style="font-size: 30px">&#129315</th>
@@ -101,11 +95,10 @@ function getColoreCellaMultipli($moltiplicatore1, $moltiplicatore2){
 
 </tbody>
 </table>
+</div>
 
 <br>
 <a href="/veronica_tedesco/programmazione-web/table/formtable.php"> Indietro</a>
 
 </body>
 </html>
-
-
