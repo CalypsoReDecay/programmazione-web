@@ -4,10 +4,11 @@
 <?php
 
 function estrazione(){
-    for($x = 1; $x <= 90; $x++){
-        return rand(1, 90) . "<br>";
-
+    $estrazione = [];
+    for($x = 1; $x <= 5; $x++){
+        $estrazione[$x] = rand(1, 90);
     }
+    return $estrazione;
 }
 
 $ruota = array (
